@@ -1,0 +1,18 @@
+h1 {
+	font-family:system-ui; 
+	color: blue;
+}
+
+#submit_guess{
+    color:white;
+    background:blue;
+    text-align:center;
+    font-family:system-ui;
+}
+
+#new_game{
+	color:white;
+	background:green;
+	text-align:center;
+	font-family:system-ui;
+}

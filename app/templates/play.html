@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>	
+<body>
+
+<h1>Lets Play!</h1>
+<p>I am thinking of a number between 1 and 10. Guess that number</p>
+
+{% if guess %}
+	Your guess was {{guess}}
+{% endif %}
+
+{% if feedback %}
+	- {{feedback}}
+{% endif %}
+
+{% if success == -1 %}
+<p>
+<form action="play" method="post">
+	<label for="guess">Enter your guess below:</label><br>
+	<input type="text" id="guess" name="guess"><br>
+	<input id="submit_guess" type="submit" value="Submit">
+</form>
+{% endif %}
+
+{% if success == 1 %}
+<p>
+<form action="new_game" method="post">
+	<input id="new_game" type="submit" value="New Game">
+</form>
+{% endif %}
+
+</body>
+</html> 
